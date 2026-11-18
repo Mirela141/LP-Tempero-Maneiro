@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos | Tempero Maneiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="Logo Tempero Maneiro.png" alt="Tempero Maneiro">
+            </a>
+
+            <nav class="nav">
+                <a href="historia.html">Nossa História</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="diferenciais.html">Diferenciais</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="produtos">
+            <h1>Nossas Linhas de Produtos</h1>
+            <p>Conheça a variedade de temperos da nossa fábrica.</p>
+
+            <div class="filtros">
+                <button onclick="filtrar('todos')">Todos</button>
+                <button onclick="filtrar('cotidiano')">Cotidiano</button>
+                <button onclick="filtrar('premium')">Premium</button>
+                <button onclick="filtrar('internacionais')">Internacionais</button>
+                <button onclick="filtrar('multiuso')">Multiuso</button>
+            </div>
+
+            <div class="lista-produtos">
+
+                <div class="produto cotidiano">
+                    <h3>Orégano</h3>
+                    <p>Linha Cotidiano</p>
+                </div>
+
+                <div class="produto cotidiano">
+                    <h3>Pimenta-do-reino</h3>
+                    <p>Linha Cotidiano</p>
+                </div>
+
+                <div class="produto cotidiano">
+                    <h3>Alho em flocos</h3>
+                    <p>Linha Cotidiano</p>
+                </div>
+
+                <div class="produto cotidiano">
+                    <h3>Salsa desidratada</h3>
+                    <p>Linha Cotidiano</p>
+                </div>
+
+                <div class="produto premium">
+                    <h3>Lemon Pepper</h3>
+                    <p>Linha Premium</p>
+                </div>
+
+                <div class="produto premium">
+                    <h3>Chimichurri artesanal</h3>
+                    <p>Linha Premium</p>
+                </div>
+
+                <div class="produto premium">
+                    <h3>Páprica defumada</h3>
+                    <p>Linha Premium</p>
+                </div>
+
+                <div class="produto premium">
+                    <h3>Sal rosa temperado</h3>
+                    <p>Linha Premium</p>
+                </div>
+
+                <div class="produto internacionais">
+                    <h3>Curry indiano</h3>
+                    <p>Linha Internacional</p>
+                </div>
+
+                <div class="produto internacionais">
+                    <h3>Ervas de Provence</h3>
+                    <p>Linha Internacional</p>
+                </div>
+
+                <div class="produto internacionais">
+                    <h3>Garam Masala</h3>
+                    <p>Linha Internacional</p>
+                </div>
+
+                <div class="produto internacionais">
+                    <h3>Zaatar</h3>
+                    <p>Linha Internacional</p>
+                </div>
+
+                <div class="produto multiuso">
+                    <h3>Canela em pau e pó</h3>
+                    <p>Linha Multiuso</p>
+                </div>
+
+                <div class="produto multiuso">
+                    <h3>Cravo-da-índia</h3>
+                    <p>Linha Multiuso</p>
+                </div>
+
+                <div class="produto multiuso">
+                    <h3>Noz-moscada</h3>
+                    <p>Linha Multiuso</p>
+                </div>
+
+                <div class="produto multiuso">
+                    <h3>Anis-estrelado</h3>
+                    <p>Linha Multiuso</p>
+                </div>
+
+                <div class="produto multiuso">
+                    <h3>Gengibre</h3>
+                    <p>Linha Multiuso</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Tempero Maneiro - Todos os direitos reservados.</p>
+        <a href="index.html">Voltar para o início</a>
+    </footer>
+
+    <script>
+        function filtrar(categoria) {
+            const produtos = document.querySelectorAll('.produto');
+
+            produtos.forEach(produto => {
+                if (categoria === 'todos' ||
+                    produto.classList.contains(categoria)) {
+                    produto.style.display = 'block';
+                } else {
+                    produto.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
